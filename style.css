@@ -1,6 +1,8 @@
 #box {
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    box-sizing: content-box;
 }
 .grid {
     box-sizing: content-box;
@@ -10,5 +12,5 @@
 .cell {
     width: 30px;
     height: 30px;
-    border: 1px solid black;
+    border: 1px dotted gray;
 }
