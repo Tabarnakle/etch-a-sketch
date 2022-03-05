@@ -1,0 +1,13 @@
+#grid {
+    box-sizing: content-box;
+    display: flex;
+    width: 480px;
+    border: 1px solid black
+}
+.cell {
+    width: 30px;
+    height: 30px;
+}
+.cell:hover {
+    background-color: black;
+}
