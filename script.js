@@ -1,9 +1,11 @@
-function createGrid(side) {
+function createGrid() {
+    const side = getValue()
     const container = document.getElementById("box");
     const containerSize = parseInt(getComputedStyle(container).width)
     const cellSize = (containerSize / side)
-    const cellTotal = side * side
-    // clearGrid()
+    console.log(cellSize);
+    const cellTotal = side * side 
+    clearGrid()
     container.appendChild(createCells(cellTotal, cellSize))
     document.querySelectorAll('.cell').forEach(cell => {
         cell.addEventListener('mouseover', event => {
@@ -14,12 +16,16 @@ function createGrid(side) {
 
 function clearGrid() {
     let cells = document.querySelectorAll('.cell')
+    let grid = document.querySelector('.grid')
     if (cells) {
         cells.forEach(element => {
             element.remove()
     })
     } else {
         console.log('No cells created');
+    }
+    if (grid) {
+        grid.remove()
     }
 }
 
@@ -36,5 +42,8 @@ function createCells(cellTotal, cellSize) {
     }
     return grid
 }
-document.getElementById('btnClear').addEventListener('click', () => clearGrid())
-document.getElementById('btnCreate').addEventListener('click', () => createGrid(16))
+function getValue() {
+    let gridSize = document.getElementById('gridSize').value
+    return gridSize
+}
+document.getElementById('btnCreate').addEventListener('click', () => createGrid())

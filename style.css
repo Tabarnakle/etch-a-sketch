@@ -1,16 +1,17 @@
 #box {
-    width: 500px;
-    height: 500px;
-    border: 1px solid black;
+    width: 320px;
+    height: 320px;
     box-sizing: content-box;
+
 }
 .grid {
-    box-sizing: content-box;
+    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 .cell {
-    width: 30px;
-    height: 30px;
+    box-sizing: border-box;
     border: 1px dotted gray;
 }
