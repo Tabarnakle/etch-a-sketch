@@ -1,2 +1,2 @@
-#Etch-A-Sketch
-##The Odin Project Challenge
+# Etch-A-Sketch
+## The Odin Project Challenge
