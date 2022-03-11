@@ -8,8 +8,10 @@ function createGrid() {
     clearGrid()
     container.appendChild(createCells(cellTotal, cellSize))
     document.querySelectorAll('.cell').forEach(cell => {
+        let count = 0
         cell.addEventListener('mouseover', event => {
-            cell.style['background-color'] = 'black'
+            count += 0.2
+            cell.style['opacity'] = count
         })
     })
 }

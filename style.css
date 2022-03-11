@@ -2,6 +2,7 @@
     width: 320px;
     height: 320px;
     box-sizing: content-box;
+    border: 1px dotted gray;
 
 }
 .grid {
@@ -12,6 +13,8 @@
     align-items: center;
 }
 .cell {
+    background-color: black;
+    opacity: 0;
     box-sizing: border-box;
     border: 1px dotted gray;
 }
